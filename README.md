@@ -16,7 +16,7 @@ Free sending of SMS via the microcontroller when some sensors are triggered
 
 ## 2. Використання API від Twilio 
 API для надсилання SMS функціонує як POST-запит з наступними параметрами:  
-- url = "https://api.twilio.com/2010-04-01/Accounts/___sid___/Messages.json"
+- url = "https://api.twilio.com/2010-04-01/Accounts/ ___sid___ /Messages.json"
 - data = "To=***to_num***&From=***from_num***&Body=***message***"
 - auth = "***sid***", "***token***"
 - headers = {"Content-Type": "application/x-www-form-urlencoded"}
