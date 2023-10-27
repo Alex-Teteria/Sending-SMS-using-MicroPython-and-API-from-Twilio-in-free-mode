@@ -9,12 +9,11 @@ Free sending of SMS via the microcontroller when some sensors are triggered
 2. [Obtaining a free SMTP service for sending email](./README.md#2-Obtaining-a-free-SMTP-service-for-sending-email)
 3. [Install](./README.md#3-install)
 4. [Objects used](./README.md#4-Objects-used)
-5. [Example](./README.md#5-Example)
+5. [Приклад](./README.md#5-Приклад)
    
 ## 1. Огляд
 
-Using an ESP32 board with MicroPython automated the process of sending emails using an SMTP server. To send e-mails using MicroPython, the [uMail](https://github.com/shawwwn/uMail) module is used. This module is not part of the MicroPython library, so it needs to be downloaded. As an example, sending notifications by e-mail when sensors are triggered is implemented.
-![Схема функціонування](https://github.com/Alex-Teteria/Sending-emails-via-ESP32/assets/94607514/6f9b519a-88ac-4211-8336-8b7c64040cba)
+[Twilio](https://www.twilio.com/) надає можливість пересилати повідомлення SMS використовуючи API. Реєстрація на сайті [Twilio](https://www.twilio.com/) та безкоштовне пробне (trial) використання його сервісів передбачає надання одного телефонного номера, через який буде здійснюватись обмін повідомленнями. При цьому trial-режим використання має ряд обмежень, одне з яких можливість відправляти SMS тільки на один номер +380ХХХХХХХХХ, який зазначається при реєстрації та попередньо перевіряється надсиланням на нього коду. Але ніщо не заважає зареєструвати необхідну кількість телефонів як окремих користувачів, відповідно на кожен з них необхідно мати e-mail, який також перевіряється при реєстрації. Використовуючи мікроконтролер, наприклад ESP8266, можна автоматизувати процес розсилання повідомлень SMS по усім необхідним мобільним телефонам. Як [приклад](./README.md#5-Приклад), реалізовано відправлення SMS-повідомлень на окремі телефони при спрацьовуванні датчиків.
 
 ## 2. Obtaining a free SMTP service for sending email
 Before starting all further actions, it is advisable to create a new e-mail account from which the mailing will take place. If something goes wrong and you get banned, it won't be your primary email address :blush:  
